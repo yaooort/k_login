@@ -10,7 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  another_flushbar: ^1.10.29
   another_transformer_page_view: ^2.0.0
   intl_phone_number_input: ^0.7.4
   phone_numbers_parser: ^9.0.3

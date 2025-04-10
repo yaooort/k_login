@@ -68,22 +68,22 @@ class _ConfirmRecoverCardState extends State<_ConfirmRecoverCard>
     );
 
     if (error != null) {
-      if (context.mounted) {
-        showErrorToast(context, messages.flushbarTitleError, error);
-      }
+      // if (context.mounted) {
+      //   showErrorToast(context, messages.flushbarTitleError, error);
+      // }
       setState(() => _isSubmitting = false);
       if (context.mounted) {
         await _submitController.reverse();
       }
       return false;
     } else {
-      if (context.mounted) {
-        showSuccessToast(
-          context,
-          messages.flushbarTitleSuccess,
-          messages.confirmRecoverSuccess,
-        );
-      }
+      // if (context.mounted) {
+      //   showSuccessToast(
+      //     context,
+      //     messages.flushbarTitleSuccess,
+      //     messages.confirmRecoverSuccess,
+      //   );
+      // }
 
       setState(() => _isSubmitting = false);
       widget.onSubmitCompleted();

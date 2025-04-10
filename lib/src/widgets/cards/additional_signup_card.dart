@@ -152,20 +152,20 @@ class _AdditionalSignUpCardState extends State<_AdditionalSignUpCard>
       await _submitController.reverse();
     }
     if (!isNullOrEmpty(error)) {
-      if (context.mounted) {
-        showErrorToast(context, messages.flushbarTitleError, error!);
-      }
+      // if (context.mounted) {
+      //   showErrorToast(context, messages.flushbarTitleError, error!);
+      // }
       setState(() => _isSubmitting = false);
       return false;
     } else {
-      if (context.mounted) {
-        showSuccessToast(
-          context,
-          messages.flushbarTitleSuccess,
-          messages.signUpSuccess,
-          const Duration(seconds: 4),
-        );
-      }
+      // if (context.mounted) {
+      //   showSuccessToast(
+      //     context,
+      //     messages.flushbarTitleSuccess,
+      //     messages.signUpSuccess,
+      //     const Duration(seconds: 4),
+      //   );
+      // }
 
       setState(() => _isSubmitting = false);
       // await _loadingController.reverse();

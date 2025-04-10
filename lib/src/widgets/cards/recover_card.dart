@@ -68,22 +68,22 @@ class _RecoverCardState extends State<_RecoverCard>
     final error = await auth.onRecoverPassword!(auth.email);
 
     if (error != null) {
-      if (context.mounted) {
-        showErrorToast(context, messages.flushbarTitleError, error);
-      }
+      // if (context.mounted) {
+      //   showErrorToast(context, messages.flushbarTitleError, error);
+      // }
       setState(() => _isSubmitting = false);
       if (context.mounted) {
         await _submitController.reverse();
       }
       return false;
     } else {
-      if (context.mounted) {
-        showSuccessToast(
-          context,
-          messages.flushbarTitleSuccess,
-          messages.recoverPasswordSuccess,
-        );
-      }
+      // if (context.mounted) {
+      //   showSuccessToast(
+      //     context,
+      //     messages.flushbarTitleSuccess,
+      //     messages.recoverPasswordSuccess,
+      //   );
+      // }
 
       setState(() => _isSubmitting = false);
       widget.onSubmitCompleted();

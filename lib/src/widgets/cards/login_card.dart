@@ -226,9 +226,9 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
     }
 
     if (!isNullOrEmpty(error)) {
-      if (context.mounted) {
-        showErrorToast(context, messages.flushbarTitleError, error!);
-      }
+      // if (context.mounted) {
+      //   showErrorToast(context, messages.flushbarTitleError, error!);
+      // }
 
       Future.delayed(const Duration(milliseconds: 271), () {
         if (mounted) {
@@ -252,13 +252,13 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
         _switchAuthMode();
         return false;
       } else if (!widget.loginAfterSignUp) {
-        if (context.mounted) {
-          showSuccessToast(
-            context,
-            messages.flushbarTitleSuccess,
-            messages.signUpSuccess,
-          );
-        }
+        // if (context.mounted) {
+        //   showSuccessToast(
+        //     context,
+        //     messages.flushbarTitleSuccess,
+        //     messages.signUpSuccess,
+        //   );
+        // }
 
         _switchAuthMode();
         setState(() => _isSubmitting = false);
@@ -283,9 +283,9 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
         // Only show error toast if error is not in exclusion list
         if (loginProvider.errorsToExcludeFromErrorMessage == null ||
             !loginProvider.errorsToExcludeFromErrorMessage!.contains(error)) {
-          if (context.mounted) {
-            showErrorToast(context, messages.flushbarTitleError, error!);
-          }
+          // if (context.mounted) {
+          //   showErrorToast(context, messages.flushbarTitleError, error!);
+          // }
         }
         return false;
       }
@@ -316,9 +316,9 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
       // Only show error toast if error is not in exclusion list
       if (loginProvider.errorsToExcludeFromErrorMessage == null ||
           !loginProvider.errorsToExcludeFromErrorMessage!.contains(error)) {
-        if (context.mounted) {
-          showErrorToast(context, messages.flushbarTitleError, error!);
-        }
+        // if (context.mounted) {
+        //   showErrorToast(context, messages.flushbarTitleError, error!);
+        // }
       }
 
       Future.delayed(const Duration(milliseconds: 271), () {
@@ -347,9 +347,9 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
           // Only show error toast if error is not in exclusion list
           if (loginProvider.errorsToExcludeFromErrorMessage == null ||
               !loginProvider.errorsToExcludeFromErrorMessage!.contains(error)) {
-            if (context.mounted) {
-              showErrorToast(context, messages.flushbarTitleError, error!);
-            }
+            // if (context.mounted) {
+            //   showErrorToast(context, messages.flushbarTitleError, error!);
+            // }
           }
 
           Future.delayed(const Duration(milliseconds: 271), () {
