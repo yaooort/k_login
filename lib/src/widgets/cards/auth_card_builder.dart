@@ -493,7 +493,7 @@ class AuthCardState extends State<AuthCard> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     final deviceSize = MediaQuery.of(context).size;
-    final cardWidth = min(deviceSize.width * 0.85, 410.0);
+    final cardWidth = min(deviceSize.width, 410.0);
     final Widget current = Container(
       width: widget.popupOnly ? cardWidth : deviceSize.width,
       padding: widget.padding,
@@ -512,7 +512,7 @@ class AuthCardState extends State<AuthCard> with TickerProviderStateMixin {
           return widget.popupOnly
               ? IntrinsicHeight(
             child: Container(
-              padding: const EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(15.0),
               child: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
